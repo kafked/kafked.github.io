@@ -4,7 +4,7 @@ $(document).ready(function () {
     link.click(function (e) {
         var _this = $(this);
 
-        var content = _this.closest(searchItem).find(".search-results__item-tabs-content, .search-results__item-terms");
+        var content = _this.closest(searchItem).find(".search-results__item-terms-option, .search-results__item-rests-list, .search-results__item-terms");
         if (_this.hasClass('_active')) return;
         $(_this.closest(searchItem).find('.search-results__item-tabs-link')).removeClass('_active');
         $(_this).addClass('_active');

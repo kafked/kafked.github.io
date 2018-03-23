@@ -47,6 +47,12 @@
     }
   }
 }
+.search-results__item-rests-list {
+  display: none;
+  &._active {
+    display: inline-block;
+  }
+}
 .search-results__item-rests-title {
   color: $white;
   font-size: 16px;
@@ -65,6 +71,7 @@
 .search-results__item-right {
   margin-left: 30px;
   margin-bottom: -20px;
+  min-width: 220px;
 }
 .search-results__item-photo {
   display: flex;
@@ -101,10 +108,8 @@
   font-size: 15px;
   max-height: 22px;
   width: 100%;
-  display: none;
-  &._active {
-    display: block;
-  }
+  display: block;
+
   p {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -116,10 +121,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  display: none;
-  &._active {
-    display: flex;
-  }
 }
 .search-results__item-terms-item {
   flex-basis: 25%;
@@ -132,4 +133,8 @@
 .search-results__item-terms-option {
   color: $color-green;
   //font-weight: 300;
+  display: none;
+  &._active {
+    display: inline;
+  }
 }
