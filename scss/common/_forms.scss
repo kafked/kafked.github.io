@@ -1,0 +1,101 @@
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input {
+  &[type="radio"], &[type="checkbox"] {
+    display: none;
+    ~ label {
+      position: relative;
+      &:before {
+        content: "";
+        width: 11px;
+        height: 11px;
+        background: $color-gray;
+        display: inline-block;
+        vertical-align: baseline;
+        cursor: pointer;
+        margin-right: 5px;
+        border-radius: 50%;
+
+      }
+    }
+    &:checked {
+      ~ label {
+        &:before {
+          background-color: $color-green;
+        }
+      }
+    }
+  }
+  &[type="checkbox"] {
+    ~ label {
+      padding-left: 24px;
+
+      &:before {
+        border-radius: 4px;
+        border: 2px solid $color-gray;
+        background: none;
+        width: 16px;
+        height: 16px;
+        vertical-align: -3px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+
+      }
+    }
+    &:checked {
+      ~ label {
+        &:before {
+          background: none;
+          border-color: $color-green;
+        }
+        &:after {
+          //@extend .icon-check:before;
+          font-family: "icomoon";
+          position: absolute;
+          left: 3px;
+          top: 1px;
+          bottom: 0;
+          margin: auto;
+          font-size: 10px;
+          color: $color-green;
+
+        }
+      }
+    }
+  }
+}
+
+input, select {
+  &:not([type="radio"]), &:not([type="checkbox"]) {
+    background-color: transparent;
+    border: 1px solid transparentize($color-main, .72);
+    border-radius: 2px;
+    padding: 6px;
+    min-width: 0;
+    font-size: 14px;
+    &:focus {
+      border-color: $color-green;
+    }
+  }
+}
+input {
+  &::-webkit-input-placeholder {color:$color-gray;}
+  &::-moz-placeholder          {color:$color-gray;}
+  &:-moz-placeholder           {color:$color-gray;}
+  &:-ms-input-placeholder      {color:$color-gray;}
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  //background: url('../img/select-arrow.png') no-repeat right 6px center;
+  padding-right: 32px !important;
+}
+.background_opacity_gray {
+  background: transparentize(#383838, 0.3);
+}

@@ -1,0 +1,18 @@
+.page-main-container {
+  position: relative;
+  overflow: hidden;
+}
+.content-container {
+  background-color: $color-lightgray;
+  min-height: 100vh;
+  padding: 95px 0 260px;
+}
+.page-wrapper {
+  max-width: $page-wrapper;
+  margin: 0 auto;
+  width: 100%;
+}
+.page-wrapper_padding {
+  padding-left: 15px;
+  padding-right: 15px;
+}

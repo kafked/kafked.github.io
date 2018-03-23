@@ -1,0 +1,174 @@
+$(document).ready(function () {
+    $('select.customize').tzSelect({
+        render: function (option) {
+            if (option.data('image')) {
+                var img = '<i class="' + option.data('image') + '" />';
+            }
+            else {
+                var img = '';
+            }
+                return $('<li>', {
+                    html: img + '<span>' + option.data('html-text') + '</span>'
+            });
+        },
+        className: 'hasDetails'
+    });
+    $('select.regularSelect').tzSelect();
+});
+
+(function ($) {
+    $.fn.tzSelect = function (options) {
+        options = $.extend({
+            render: function (option) {
+                return $('<li>', {
+                    html: option.text()
+                });
+            },
+            className: ''
+        }, options);
+
+        return this.each(function () {
+
+            // The "this" points to the current select element:
+
+            var select = $(this);
+
+            var selectBoxContainer = $('<div>', {
+                width: select.outerWidth(),
+                className: 'tzSelect',
+                html: '<div class="selectBox"></div><div class="selecBoxing"></div>'
+            });
+
+            var dropDown = $('<ul>', {className: 'dropDown'});
+            var selectBox = selectBoxContainer.find('.selectBox');
+            var selectBox2 = selectBoxContainer.find('.selecBoxing');
+
+            // Looping though the options of the original select element
+
+            if (options.className) {
+                dropDown.addClass(options.className);
+            }
+
+            select.find('option').each(function (i) {
+                var option = $(this);
+
+                if (i == select.attr('selectedIndex')) {
+                    selectBox.html(option.text());
+                }
+
+                // As of jQuery 1.4.3 we can access HTML5
+                // data attributes with the data() method.
+
+                if (option.data('skip')) {
+                    return true;
+                }
+
+                // Creating a dropdown item according to the
+                // data-icon and data-html-text HTML5 attributes:
+
+                var li = options.render(option);
+
+                li.click(function () {
+                    var smallIcon;
+                    if (option.data('icon')){
+                        smallIcon = '<i class="' + option.data('icon') + '" /></i>';
+                    }
+                    else if (option.data('image')) {
+                        smallIcon = '<i class="' + option.data('image') + '" />';
+                    }
+                    else {
+                        smallIcon = '';
+                    }
+                    selectBox2.html(smallIcon + option.text());
+                    dropDown.trigger('hide');
+
+                    $('header').removeClass('bgc-hover');
+                    $('header.index2bg').removeClass('bgc-hover-2');
+                    $('header.index3bg').removeClass('bgc-hover-3');
+                    $('header.index4bg').removeClass('bgc-hover-4');
+
+
+                    $('.tzSelect').addClass('bgc-select');
+
+
+                    // When a click occurs, we are also reflecting
+                    // the change on the original select element:
+                    select.val(option.val());
+                    selectBox.addClass('selecteds');
+                    selectBox2.addClass('selecteds');
+                    $("form:first").trigger("submit");
+                    return false;
+                });
+
+                dropDown.append(li);
+            });
+
+            $('.clearForm').click(function () {
+                selectBox2.html('');
+                selectBox.removeClass('selecteds');
+                selectBox2.removeClass('selecteds');
+                $('.tzSelect').removeClass('bgc-select');
+            });
+
+            selectBoxContainer.append(dropDown.hide());
+            select.hide().after(selectBoxContainer);
+
+            // Binding custom show and hide events on the dropDown:
+
+            dropDown.bind('show', function () {
+
+                if (dropDown.is(':animated')) {
+                    return false;
+                }
+
+                selectBox.addClass('expanded');
+                $('header').addClass('bgc-hover');
+                $('header.index2bg').addClass('bgc-hover-2');
+                $('header.index3bg').addClass('bgc-hover-3');
+                $('header.index4bg').addClass('bgc-hover-4');
+                dropDown.slideDown();
+
+
+            }).bind('hide', function () {
+
+                if (dropDown.is(':animated')) {
+                    return false;
+                }
+
+                selectBox.removeClass('expanded');
+
+                dropDown.slideUp();
+
+
+            }).bind('toggle', function () {
+                if (selectBox.hasClass('expanded')) {
+                    dropDown.trigger('hide');
+                    $('header').removeClass('bgc-hover');
+                    $('header.index2bg').removeClass('bgc-hover-2');
+                    $('header.index3bg').removeClass('bgc-hover-3');
+                    $('header.index4bg').removeClass('bgc-hover-4');
+                }
+                else dropDown.trigger('show');
+                $('.dropDown').not(dropDown).trigger('hide');
+
+
+            });
+
+            selectBox.click(function () {
+                dropDown.trigger('toggle');
+                return false;
+            });
+
+            // If we click anywhere on the page, while the
+            // dropdown is shown, it is going to be hidden:
+
+            $(document).click(function () {
+                dropDown.trigger('hide');
+                $('header').removeClass('bgc-hover');
+                $('header.index2bg').removeClass('bgc-hover-2');
+                $('header.index3bg').removeClass('bgc-hover-3');
+                $('header.index4bg').removeClass('bgc-hover-4');
+            });
+        });
+    }
+})(jQuery);
