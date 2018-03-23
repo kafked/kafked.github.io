@@ -852,7 +852,9 @@ a.icon-circle_green:active {
   font-size: 15px;
   max-height: 22px;
   width: 100%;
-  display: block; }
+  display: none; }
+  .search-results__item-tabs-content._active {
+    display: block; }
   .search-results__item-tabs-content p {
     white-space: nowrap;
     text-overflow: ellipsis;
