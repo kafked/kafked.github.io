@@ -1,4 +1,4 @@
-.main-search-form {
+.search-filter {
   margin-top: 117px;
   position: absolute;
   top: 0;
@@ -7,21 +7,21 @@
   width: 100%;
   z-index: 5;
 }
-.main-search-form__form {
+.search-filter__form {
   display: flex;
   align-items: flex-start;
   box-shadow: 0 0 3px 1px $outer-glow;
   height: 80px;
   position: relative;
 }
-.main-search-form__clear-link {
+.search-filter__clear-link {
   width: 26px;
   height: 26px;
   float: right;
   margin-right: 7px;
   margin-top: 9px;
 }
-.main-search-form__select {
+.search-filter__select {
   width: 200px;
   background: $white;
   cursor: pointer;
@@ -89,10 +89,13 @@
     }
     &.expanded {
       padding-bottom: 30px;
+      margin-top: -1px;
+      background-color: $white;
       &:after {
         bottom: 26px;
         transform: rotate(-135deg);
       }
+      position: relative;
       ~ .dropDown {
         //margin-top: -30px;
       }
@@ -144,7 +147,7 @@
     }
   }
 }
-.main-search-form__select-lookfor {
+.search-filter__select-lookfor {
   .selectBox:before {
     font-family: "Font Awesome 5 Solid";
     content: "\f002";
@@ -155,19 +158,19 @@
     margin-bottom: 2px;
   }
 }
-.main-search-form__select-state .selectBox:before {
+.search-filter__select-state .selectBox:before {
   font-family: "Font Awesome 5 Solid";
   content: "\f3c5";
 }
-.main-search-form__select-region .selectBox:before {
+.search-filter__select-region .selectBox:before {
   font-family: "Font Awesome 5 Solid";
   content: "\f279";
 }
-.main-search-form__select-month .selectBox:before {
+.search-filter__select-month .selectBox:before {
   font-family: "Font Awesome 5 Solid";
   content: "\f073";
 }
-.main-search-form__select-relax {
+.search-filter__select-relax {
   .selectBox:before {
     font-family: "Font Awesome 5 Solid";
     content: "\f0ca";
@@ -199,7 +202,7 @@
   }
 }
 
-.main-search-form__button {
+.search-filter__button {
   width: 164px;
   background: $color-green2;
   color: $white;
@@ -213,7 +216,7 @@
     background: darken($color-green2, 2%);
   }
 }
-.main-search-form__user-search-link {
+.search-filter__user-search-link {
   position: absolute;
   left: 0;
   top: -32px;

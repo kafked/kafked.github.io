@@ -82,12 +82,6 @@ $(document).ready(function () {
                     selectBox2.html(smallIcon + option.text());
                     dropDown.trigger('hide');
 
-                    $('header').removeClass('bgc-hover');
-                    $('header.index2bg').removeClass('bgc-hover-2');
-                    $('header.index3bg').removeClass('bgc-hover-3');
-                    $('header.index4bg').removeClass('bgc-hover-4');
-
-
                     $('.tzSelect').addClass('bgc-select');
 
 
@@ -116,42 +110,25 @@ $(document).ready(function () {
             // Binding custom show and hide events on the dropDown:
 
             dropDown.bind('show', function () {
-
                 if (dropDown.is(':animated')) {
                     return false;
                 }
-
                 selectBox.addClass('expanded');
-                $('header').addClass('bgc-hover');
-                $('header.index2bg').addClass('bgc-hover-2');
-                $('header.index3bg').addClass('bgc-hover-3');
-                $('header.index4bg').addClass('bgc-hover-4');
                 dropDown.slideDown();
 
-
             }).bind('hide', function () {
-
-                if (dropDown.is(':animated')) {
-                    return false;
-                }
-
+                // if (dropDown.is(':animated')) {
+                //     return false;
+                // }
+                $('<ul>', {className: 'dropDown'}).removeClass('expanded');
                 selectBox.removeClass('expanded');
-
                 dropDown.slideUp();
-
-
             }).bind('toggle', function () {
                 if (selectBox.hasClass('expanded')) {
                     dropDown.trigger('hide');
-                    $('header').removeClass('bgc-hover');
-                    $('header.index2bg').removeClass('bgc-hover-2');
-                    $('header.index3bg').removeClass('bgc-hover-3');
-                    $('header.index4bg').removeClass('bgc-hover-4');
                 }
                 else dropDown.trigger('show');
                 $('.dropDown').not(dropDown).trigger('hide');
-
-
             });
 
             selectBox.click(function () {
@@ -164,10 +141,6 @@ $(document).ready(function () {
 
             $(document).click(function () {
                 dropDown.trigger('hide');
-                $('header').removeClass('bgc-hover');
-                $('header.index2bg').removeClass('bgc-hover-2');
-                $('header.index3bg').removeClass('bgc-hover-3');
-                $('header.index4bg').removeClass('bgc-hover-4');
             });
         });
     }
