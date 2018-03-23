@@ -55,6 +55,7 @@
     color: $color-gray2;
     font-weight: 300;
     transition: .5s padding;
+    letter-spacing: 0.2px;
     &.selecteds {
       padding-bottom: 30px;
       &:after {
@@ -179,7 +180,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 254px;
-    border-bottom-color: $white;
+    border-bottom: none;
     li {
       font-size: 16.28px;
       text-align: center;

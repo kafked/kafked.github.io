@@ -19,9 +19,27 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    $('.search-results__sort .select-sex .dropdown-menu a').click(function (e) {
+    var sortDropdown = $('.sort-results__dropdown');
+    var openedDropdown;
+    var clickedLink;
+    $('.sort-results__link').click(function (e) {
+        clickedLink = $(this);
+        openedDropdown = $(this).nextAll( ".sort-results__dropdown" );
+        openedDropdown.slideDown();
         var getContent = $(this).html();
         $('.search-results__sort .select-sex .dropdown-menu').prev('a').html(getContent);
         e.preventDefault();
+    });
+    $('.sort-results__dropdown-item').click(function (e) {
+        var getContent = $(this).html();
+        clickedLink.html(getContent);
+        e.preventDefault();
+    });
+
+    $(document).click(function () {
+        if (sortDropdown.is(':animated')) {
+            return false;
+        }
+        sortDropdown.slideUp();
     });
 });

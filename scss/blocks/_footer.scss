@@ -2,7 +2,7 @@
   background: $footer-bg;
   bottom: 0;
   color: $white;
-  padding: 54px 0 40px;
+  padding: 56px 0 0;
 }
 .footer__wrapper {
   display: flex;
@@ -20,6 +20,7 @@
   font-size: 13px;
   margin-top: 16px;
   display: block;
+  letter-spacing: 0.7px;
 }
 .footer__apps-img {
   width: 164px;
@@ -55,6 +56,7 @@
   text-transform: uppercase;
   margin-bottom: 7px;
   color: $color-green;
+  letter-spacing: 0.6px;
 }
 .footer__menu-list {
   flex: 1;
@@ -146,7 +148,10 @@
 }
 .footer__copyright {
   flex-basis: 100%;
-  text-align: right;
+  text-align: center;
   font-size: 10px;
-  padding-top: 28px;
+  margin-top: 42px;
+  height: 30px;
+  border-top: 1px solid transparentize($white, .79);
+  padding-top: 9px;
 }

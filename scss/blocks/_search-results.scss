@@ -8,6 +8,7 @@
   font-size: 22px;
   float: left;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 .search-results__list {
 
@@ -122,6 +123,7 @@
 }
 .search-results__item-terms-item {
   flex-basis: 25%;
+  letter-spacing: 0.4px;
   svg {
     margin-right: 6px;
     min-width: 26px;
@@ -129,54 +131,5 @@
 }
 .search-results__item-terms-option {
   color: $color-green;
-  font-weight: 300;
-}
-.search-results__sort {
-  float: right;
-  font-size: 16px;
-  .sort {
-    color: $color-main;
-    svg {
-      margin-right: 4px;
-    }
-  }
-  .dropdown {
-    float: right;
-    margin-left: 12px;
-    position: relative;
-    svg {
-      margin-right: 4px;
-    }
-    a {
-      color: #887037;
-    }
-    > a {
-      &:hover {
-        + .dropdown-menu {
-          display: block;
-        }
-        &:after {
-          position: absolute;
-          content: "";
-          height: 100%;
-          width: 100%;
-          left: 0;
-          top: 50%;
-        }
-      }
-    }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      white-space: nowrap;
-      top: 100%;
-      right: 0;
-      font-size: 14px;
-      background: $white;
-      padding: 8px;
-      &:hover {
-        display: block;
-      }
-    }
-  }
+  //font-weight: 300;
 }
