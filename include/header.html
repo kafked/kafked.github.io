@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1320">
+    <title>ПОИСК ПУТИ</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <script>
+        FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="page-main-container">
+    <header class="header">
+        <div class="page-wrapper header__wrapper">
+            <a href="/" class="header__logo">
+                <img src="img/logo.svg" width="275" class="header__logo-img" alt="ПОИСК ПУТИ"/>
+            </a>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link header__menu-link_active">Маршруты</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Попутчики</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Инструкторы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Места Отдыха</a>
+                </li>
+            </ul>
+            <div class="header__right">
+                <div class="header__auth">
+                    <a href="#" class="header__auth-link">Войти<i class="fas fa-user-circle"></i></a>
+                </div>
+                <form action="#" class="search-input">
+                    <input class="search-input__input" type="text" placeholder="Поиск по сайту...">
+                    <button class="search-input__btn" type="button">Искать<i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
