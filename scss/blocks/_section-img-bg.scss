@@ -11,6 +11,12 @@
     left: 0;
     right: 0;
     z-index: 1;
+
+  }
+}
+.section-img-bg_overlay_light {
+  &:before {
+    background-color: $overlay-light;
   }
 }
 .section-img-bg__img {

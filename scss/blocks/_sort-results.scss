@@ -1,7 +1,7 @@
 .sort-results {
   float: right;
   font-size: 16px;
-  min-width: 142px;
+  //min-width: 142px;
   position: relative;
 }
 .sort-results__label {
@@ -52,5 +52,25 @@
     svg {
       margin-right: 4px;
     }
+    &:hover {
+      color: $color-green;
+    }
+  }
+}
+.sort-results__item {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.sort-results__map-link {
+  margin-left: 8px;
+  color: $light-brown;
+  display: inline-block;
+  vertical-align: middle;
+  &:hover {
+    color: $color-green;
+  }
+  svg {
+    margin-right: 4px;
   }
 }

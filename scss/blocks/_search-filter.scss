@@ -27,6 +27,7 @@
   cursor: pointer;
   position: relative;
   height: 100%;
+  flex: 1;
   &:not(:last-of-type) {
     border-right: 1px solid transparentize(#77b35e, 0.7);
   }
@@ -146,10 +147,14 @@
       min-width: 32px;
     }
   }
+  .selectBox {
+    &:before {
+      font-family: "Font Awesome 5 Solid";
+    }
+  }
 }
 .search-filter__select-lookfor {
   .selectBox:before {
-    font-family: "Font Awesome 5 Solid";
     content: "\f002";
   }
   svg {
@@ -159,18 +164,53 @@
   }
 }
 .search-filter__select-state .selectBox:before {
-  font-family: "Font Awesome 5 Solid";
   content: "\f3c5";
 }
+.search-filter__select-pay .selectBox:before {
+  content: "\f158";
+}
 .search-filter__select-region .selectBox:before {
-  font-family: "Font Awesome 5 Solid";
   content: "\f279";
 }
 .search-filter__select-month .selectBox:before {
-  font-family: "Font Awesome 5 Solid";
   content: "\f073";
 }
+$nth-1: 1;
+$nth-2: 2;
+$nth-3: 3;
+$nth-4: 4;
+$nth-5: 5;
 .search-filter__select-relax {
+  &:nth-of-type(#{$nth-1}) {
+    .dropDown {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+  &:nth-of-type(#{$nth-2}) {
+    .dropDown {
+      left: -#{($nth-2 - 1) * 100 + '%'};
+      margin-left: -#{$nth-2 - 1}px;
+    }
+  }
+  &:nth-of-type(#{$nth-3}) {
+    .dropDown {
+      left: -#{($nth-3 - 1) * 100 + '%'};
+      margin-left: -#{$nth-3 - 1}px;
+    }
+  }
+  &:nth-of-type(#{$nth-4}) {
+    .dropDown {
+      left: -#{($nth-4 - 1) * 100 + '%'};
+      margin-left: -#{$nth-4 - 1}px;
+    }
+  }
+  &:nth-of-type(#{$nth-5}) {
+    .dropDown {
+      left: -#{($nth-5 - 1) * 100 + '%'};
+      margin-left: -#{$nth-5 - 1}px;
+    }
+  }
   .selectBox:before {
     font-family: "Font Awesome 5 Solid";
     content: "\f0ca";
@@ -182,18 +222,23 @@
     top: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 254px;
+    max-height: 250px;
     border-bottom: none;
     li {
-      font-size: 16.28px;
+      font-size: 16px;
       text-align: center;
       flex-basis: 16.666%;
-      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       font-weight: 400;
+      padding: 28px 0 23px;
+      span {
+        display: block;
+        margin-top: 4px;
+        color: $color-green;
+      }
       img {
         display: block;
         margin: 0 auto;
