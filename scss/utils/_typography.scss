@@ -1,8 +1,38 @@
 $fontsPath: '../fonts';
 
 // Если подключать шрифты из папки
-
 //@include font-face(Icons, '#{$fontsPath}/icons', null, null, eot otf woff2 woff ttf svg);
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?k9p3kl');
+  src:  url('../fonts/icomoon.eot?k9p3kl#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?k9p3kl') format('truetype'),
+  url('../fonts/icomoon.woff?k9p3kl') format('woff'),
+  url('../fonts/icomoon.svg?k9p3kl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-many:before {
+  content: "\e900";
+}
+
 
 @font-face {
   font-family: 'routs-type';
@@ -15,7 +45,7 @@ $fontsPath: '../fonts';
   font-style: normal;
 }
 
-.type_ico i, .search-icon-routes {
+.type_ico i, .routes-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'routs-type' !important;
   speak: none;

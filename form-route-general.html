@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1320">
+    <title>ПОИСК ПУТИ</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+    <script>
+        FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="page-main-container">
+    <header class="header">
+        <div class="page-wrapper header__wrapper">
+            <a href="/" class="header__logo">
+                <img src="img/logo.svg" width="275" class="header__logo-img" alt="ПОИСК ПУТИ"/>
+            </a>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link header__menu-link_active">Маршруты</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Попутчики</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Инструкторы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Места Отдыха</a>
+                </li>
+            </ul>
+            <div class="header__right">
+                <div class="header__auth">
+                    <a href="#" class="header__auth-link">Войти<i class="form-label__icon fas fa-user-circle"></i></a>
+                </div>
+                <form action="#" class="search-input">
+                    <input class="search-input__input" type="text" class="form-input__input" placeholder="Поиск по сайту...">
+                    <button class="search-input__btn" type="button">Искать<i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main class="content-container">
+        <div class="page-wrapper page-wrapper_padding">
+            <h1 class="page-title">
+                добавить маршрут
+            </h1>
+        </div>
+        <div class="page-wrapper">
+            <div class="page-layout page-layout_white">
+                <div class="form-head">
+                    <img class="form-head__img" src="img/icons/icon-form-route.png" />
+                    <img class="form-head__img" src="img/icons/icon-form-marker.png" />
+                </div>
+                <div class="form-container">
+                    <label class="form-label">Основное фото</label>
+                    <div class="form__upload-photo">
+                        <div class="form__upload-photo-preview">
+                            <img src="http://placehold.it/800x600" />
+                        </div>
+                        <div class="form__upload-file">
+                            <div class="upload-button">
+                                <label for="upload-photo" class="button button_gray upload-button_btn">Выбрать Файл</label>
+                                <input id="upload-photo" type="file" name="photo" accept="image/*">
+                            </div>
+                            <div class="form__upload-note">
+                                Выберите изображения <span>(JPEG или PNG не более 2 МБ)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="form-label">Обложка</label>
+                    <div class="form__cover-photo">
+                        <img class="form__cover-photo-img" src="http://placehold.it/1280x960" />
+                    </div>
+                </div>
+                <div class="form-container columns">
+                    <div class="columns__item_xl">
+                        <label for="route-name" class="form-label form-label_required">Название маршрута</label>
+                        <div class="form-input form-input">
+                            <input type="text" class="form-input__input" id="route-name"/>
+                        </div>
+                    </div>
+                    <div class="columns__item_s">
+                        <label for="route-lenght-type" class="form-label form-label_required"><i class="form-label__icon fas fa-clock"></i>Продолжительность</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-lenght-type">
+                                <option>Дни</option>
+                                <option>Годы</option>
+                                <option>Века</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_s">
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-lenght-value">
+                                <option>1</option>
+                                <option>14</option>
+                                <option>42</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container columns">
+                    <div class="columns__item_l">
+                        <label for="route-state" class="form-label form-label_required"><i class="form-label__icon fas fa-map-marker-alt"></i>Округ</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-state">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_l">
+                        <label for="route-region" class="form-label form-label_required"><i class="form-label__icon fas fa-map"></i>Регион</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-region">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_s">
+                        <label for="route-cost" class="form-label form-label_required"><i class="form-label__icon icon-many"></i>Плата</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-cost">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_s">
+                        <label for="route-difficult" class="form-label form-label_required"><i class="form-label__icon fas fa-bolt"></i>Сложность</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-difficult">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container columns">
+                    <div class="columns__item_m">
+                        <label for="route-ph" class="form-label form-label_required"><i class="form-label__icon fas fa-phone"></i>Сотовая связь</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-ph">
+                                <option></option>
+                                <option>Есть</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_m">
+                        <label for="route-water" class="form-label form-label_required"><i class="form-label__icon fas fa-tint"></i>Водообеспеченность</label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-water">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_m">
+                        <label for="route-vid" class="form-label form-label_required">Вид маршрута<i class="form-label__icon fas fa-question-circle form-label__tooltip"></i></label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-vid">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_m">
+                        <label for="route-type" class="form-label form-label_required">Тип маршрута<i class="fas fa-question-circle form-label__tooltip"></i></label>
+                        <div class="form-input form-input">
+                            <select type="text" class="form-input__input" id="route-type">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="form-label form-label_required">Месяцы работы<span class="form-label__note"><a href="#">(выбрать все)</a></span></label>
+                    <div class="columns">
+                        <div class="form-checkbox-month">
+                            <input id="dec" type="checkbox" class="checkbox" />
+                            <label for="dec"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec2" type="checkbox" class="checkbox" />
+                            <label for="dec2"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec3" type="checkbox" class="checkbox" />
+                            <label for="dec3"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec4" type="checkbox" class="checkbox" />
+                            <label for="dec4"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec5" type="checkbox" class="checkbox" />
+                            <label for="dec5"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec6" type="checkbox" class="checkbox" />
+                            <label for="dec6"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec7" type="checkbox" class="checkbox" />
+                            <label for="dec7"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec8" type="checkbox" class="checkbox" />
+                            <label for="dec8"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec9" type="checkbox" class="checkbox" />
+                            <label for="dec9"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec10" type="checkbox" class="checkbox" />
+                            <label for="dec10"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec11" type="checkbox" class="checkbox" />
+                            <label for="dec11"><span>Декабрь</span></label>
+                        </div>
+                        <div class="form-checkbox-month">
+                            <input id="dec12" type="checkbox" class="checkbox" />
+                            <label for="dec12"><span>Декабрь</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="form-label form-label_required">Укажите вид отдыха<span class="form-label__note"><a href="#">(выбрать все)</a><i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <div class="form-rest-type columns">
+                        <div class="form-rest-type__item">
+                            <input id="r1" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r1"><i class="routes-icon type-1"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r2" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r2"><i class="routes-icon type-2"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r3" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r3"><i class="routes-icon type-3"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r4" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r4"><i class="routes-icon type-4"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r5" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r5"><i class="routes-icon type-5"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r6" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r6"><i class="routes-icon type-6"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r7" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r7"><i class="routes-icon type-7"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r8" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r8"><i class="routes-icon type-8"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r9" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r9"><i class="routes-icon type-9"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r10" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r10"><i class="routes-icon type-10"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r11" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r11"><i class="routes-icon type-11"></i></label>
+                        </div>
+                        <div class="form-rest-type__item">
+                            <input id="r12" type="checkbox" class="checkbox checkbox_white" />
+                            <label for="r12"><i class="routes-icon type-12"></i></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label for="text1" class="form-label form-label_required">Описание<span class="form-label__note">(0/100)</span></label>
+                    <textarea class="form-input__input _size_l" id="text1"></textarea>
+                </div>
+                <div class="form-container">
+                    <label for="text2" class="form-label">Нитка маршрута<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <textarea class="form-input__input" id="text2"></textarea>
+                </div>
+                <div class="form-container">
+                    <label for="text3" class="form-label">Места стоянок<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <textarea class="form-input__input" id="text3"></textarea>
+                </div>
+                <div class="form-container">
+                    <label for="text4" class="form-label">Схема движения маршрута<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <textarea class="form-input__input" id="text4"></textarea>
+                </div>
+                <div class="form-container">
+                    <label for="text5" class="form-label">Радиальные выходы<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <textarea class="form-input__input" id="text5"></textarea>
+                </div>
+                <div class="form-container">
+                    <label for="text6" class="form-label">Правила и рекомендации<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <textarea class="form-input__input" id="text6"></textarea>
+                </div>
+                <div class="form-container">
+                    <label for="text7" class="form-label form-label_required">Как добраться до начала маршрута<span class="form-label__note">(0/100)</span></label>
+                    <textarea class="form-input__input _size_l" id="text7"></textarea>
+                </div>
+                <div class="form-container">
+                    <label class="form-label">Загрузить изображения для маршрута</label>
+                    <label for="upload-photo2" class="form__upload-file form__upload-file_area">
+                        <span class="form-upload-area__text"><i class="fas fa-folder-open"></i>Нажмите чтоб выбрать или перетащите файл сюда</span>
+                    </label>
+                    <input id="upload-photo2" type="file" name="photo" accept="image/*">
+                </div>
+                <div class="form-container">
+                    <label for="upload-photo3" class="button button_gray upload-button_btn">Выбрать Файл</label>
+                    <input id="upload-photo3" type="file" name="photo" accept="image/*">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="page-wrapper page-wrapper_padding footer__wrapper">
+            <div class="footer__left">
+                <img src="img/logo-white.svg" width="160" class="footer__logo"/>
+                <div class="footer__apps">
+                    <span class="footer__apps-title">Мобильное приложение:</span>
+                    <div class="footer__apps-img">
+                        <img src="img/apps2.jpg" class="footer__logo"/>
+                        <!--<a href="#" class="footer__apps-link footer__apps-link-android"></a>-->
+                        <!--<a href="#" class="footer__apps-link footer__apps-link-ios"></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <div class="footer__menu-list">
+                    <div class="footer__menu-title">О НАС</div>
+                    <ul class="footer__menu-links">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">О проекте</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Карта сайта</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Благотворительность</a></li>
+                    </ul>
+                </div>
+                <div class="footer__menu-list">
+                    <div class="footer__menu-title">Полезное</div>
+                    <ul class="footer__menu-links">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Статьи</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Справки</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Форум</a></li>
+                    </ul>
+                </div>
+                <div class="footer__menu-list">
+                    <div class="footer__menu-title">Права</div>
+                    <ul class="footer__menu-links">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Условия пользования</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Права</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Правила сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer__menu-list">
+                    <div class="footer__menu-title">Обратная связь</div>
+                    <ul class="footer__menu-links">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Нашли ошибку</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Тех.Поддержка</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Добавить заведение</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Рекламодателям</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="footer__social">
+                    <a href="mailto:poisk@mail.ru" class="footer__mail-link"><i class="fa fa-envelope"></i>poisk@mail.ru</a>
+                    <div class="footer__social-title">Мы в социальных сетях:</div>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-in"><i
+                                class="fab fa-instagram"></i></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-vk"><i
+                                class="fab fa-vk"></i></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-od"><i
+                                class="fab fa-odnoklassniki"></i></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-fb"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <span>PoiskPuti.ru © Все права защищены</span>
+        </div>
+    </footer>
+</div>
+<script src="js/min/all.min.js"></script>
+</body>
+</html>

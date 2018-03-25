@@ -175,6 +175,9 @@
 .search-filter__select-month .selectBox:before {
   content: "\f073";
 }
+.search-filter__select-type .selectBox:before {
+  content: "\f015";
+}
 $nth-1: 1;
 $nth-2: 2;
 $nth-3: 3;
@@ -234,6 +237,8 @@ $nth-5: 5;
       flex-direction: column;
       font-weight: 400;
       padding: 28px 0 23px;
+      width: 16.666%;
+      float: left;
       span {
         display: block;
         margin-top: 4px;
@@ -273,7 +278,7 @@ $nth-5: 5;
     text-decoration: underline;
   }
 }
-.search-icon-routes {
+.routes-icon {
   padding-right: 0;
   font-size: 48px;
   color: $color-green;

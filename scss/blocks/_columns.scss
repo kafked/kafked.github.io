@@ -1,0 +1,21 @@
+.columns {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.columns__item_xl {
+  flex-basis: 62.5%;
+  width: 62.5%;
+}
+.columns__item_s {
+  flex-basis: 15.5%;
+  width: 15.5%;
+}
+.columns__item_l {
+  flex-basis: 29.6%;
+  width: 29.6%;
+}
+.columns__item_m {
+  flex-basis: 21.2%;
+  width: 21.2%;
+}

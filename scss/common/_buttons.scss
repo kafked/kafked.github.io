@@ -5,3 +5,28 @@
   background: none;
   border: none;
 }
+.upload-button {
+  position: relative;
+}
+.upload-button_btn {
+  position: absolute;
+  left: 0;
+  + input[type="file"] {
+    text-indent: -9999px;
+    padding-left: 80px;
+  }
+}
+.button_gray {
+  font-size: 17px;
+  background-color: $input-bg;
+  border: 1px solid $border-color;
+  padding: 3px 10px;
+  min-width: 165px;
+  text-align: center;
+  &:hover {
+    background-color: lighten($input-bg, 3%);
+  }
+  &:active {
+    background-color: darken($input-bg, 3%);
+  }
+}
