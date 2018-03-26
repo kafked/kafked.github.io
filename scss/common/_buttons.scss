@@ -30,3 +30,18 @@
     background-color: darken($input-bg, 3%);
   }
 }
+.button_green {
+  font-size: 17px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  min-width: 230px;
+  background: $color-green2;
+  color: $white;
+  &:hover {
+    background: lighten($color-green2, 2%);
+  }
+  &:active {
+    background: darken($color-green2, 2%);
+  }
+}

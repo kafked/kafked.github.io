@@ -3,9 +3,13 @@
   align-items: flex-end;
   justify-content: space-between;
 }
-.columns__item_xl {
+.columns__item_xxl {
   flex-basis: 62.5%;
   width: 62.5%;
+}
+.columns__item_xl {
+  flex-basis: 34.211%;
+  width: 34.211%;
 }
 .columns__item_s {
   flex-basis: 15.5%;
@@ -18,4 +22,8 @@
 .columns__item_m {
   flex-basis: 21.2%;
   width: 21.2%;
+}
+.columns__item_xm {
+  flex-basis: 29.8%;
+  width: 29.8%;
 }

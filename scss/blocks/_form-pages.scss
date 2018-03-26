@@ -7,7 +7,7 @@
   position: relative;
   &:before {
     content: "";
-    border-bottom: 1px dotted $border-color;
+    border-bottom: 2px dotted $border-color;
     left: 0;
     right: 0;
     position: absolute;
@@ -158,4 +158,72 @@
     color: $white;
     margin-left: 10px;
   }
+}
+.form-input {
+  position: relative;
+}
+.form-input_twiced {
+  display: flex;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    width: 1px;
+    background-color: $border-color;
+    left: 0;
+    right: 0;
+    margin: auto;
+    order: 1;
+  }
+  > .form-input__input {
+    &:first-of-type {
+      border-right: 0;
+      order: 0;
+    }
+    &:last-of-type {
+      border-left: 0;
+      order:2;
+    }
+  }
+}
+.form-input__icon-add {
+  min-width: 21px;
+  min-height: 21px;
+  color: $white;
+  background: $color-green;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 1px 6px;
+  max-width: 21px;
+  max-height: 21px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+.form-input__icon-remove {
+  @extend .form-input__icon-add;
+  background: #7d7d7d;
+}
+.form-subtitle {
+  font-size: 22px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.form-map {
+  iframe {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+.form-submit {
+  text-align: center;
 }

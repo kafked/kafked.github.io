@@ -50,14 +50,15 @@
     <main class="content-container">
         <div class="page-wrapper page-wrapper_padding">
             <h1 class="page-title">
-                добавить маршрут
+                добавить инструктора
             </h1>
         </div>
         <div class="page-wrapper">
             <div class="page-layout page-layout_white">
                 <div class="form-head">
-                    <img class="form-head__img" src="img/icons/icon-form-route.png" />
-                    <img class="form-head__img" src="img/icons/icon-form-marker.png" />
+                    <img class="form-head__img" src="img/icons/icon-form-pen.png" />
+                    <img class="form-head__img" src="img/icons/icon-form-handed.png" />
+                    <img class="form-head__img" src="img/icons/icon-form-running.png" />
                 </div>
                 <div class="form-container">
                     <label class="form-label">Основное фото</label>
@@ -84,33 +85,20 @@
                 </div>
                 <div class="form-container columns">
                     <div class="columns__item_xxl">
-                        <label for="route-name" class="form-label form-label_required">Название маршрута</label>
+                        <label for="route-name" class="form-label form-label_required">Название</label>
                         <div class="form-input">
                             <input type="text" class="form-input__input" id="route-name"/>
                         </div>
                     </div>
-                    <div class="columns__item_s">
-                        <label for="route-lenght-type" class="form-label form-label_required"><i class="form-label__icon fas fa-hourglass-half"></i>Продолжительность</label>
+                    <div class="columns__item_xl">
+                        <label for="place-email" class="form-label form-label_required"><i class="form-label__icon fas fa-envelope"></i>Почта</label>
                         <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-lenght-type">
-                                <option>Дни</option>
-                                <option>Годы</option>
-                                <option>Века</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="columns__item_s">
-                        <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-lenght-value">
-                                <option>1</option>
-                                <option>14</option>
-                                <option>42</option>
-                            </select>
+                            <input type="text" class="form-input__input" id="place-email"/>
                         </div>
                     </div>
                 </div>
                 <div class="form-container columns">
-                    <div class="columns__item_l">
+                    <div class="columns__item_xm">
                         <label for="route-state" class="form-label form-label_required"><i class="form-label__icon fas fa-map-marker-alt"></i>Округ</label>
                         <div class="form-input">
                             <select type="text" class="form-input__input" id="route-state">
@@ -121,7 +109,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="columns__item_l">
+                    <div class="columns__item_xm">
                         <label for="route-region" class="form-label form-label_required"><i class="form-label__icon fas fa-map"></i>Регион</label>
                         <div class="form-input">
                             <select type="text" class="form-input__input" id="route-region">
@@ -132,71 +120,48 @@
                             </select>
                         </div>
                     </div>
-                    <div class="columns__item_s">
-                        <label for="route-cost" class="form-label form-label_required"><i class="form-label__icon icon-many"></i>Плата</label>
+                    <div class="columns__item_xm">
+                        <label for="place-site" class="form-label form-label_required"><i class="form-label__icon fas fa-globe"></i>Сайт</label>
                         <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-cost">
-                                <option></option>
-                                <option>test</option>
-                                <option>test</option>
-                                <option>test</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="columns__item_s">
-                        <label for="route-difficult" class="form-label form-label_required"><i class="form-label__icon fas fa-bolt"></i>Сложность</label>
-                        <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-difficult">
-                                <option></option>
-                                <option>test</option>
-                                <option>test</option>
-                                <option>test</option>
-                            </select>
+                            <input type="text" class="form-input__input" id="place-site"/>
                         </div>
                     </div>
                 </div>
                 <div class="form-container columns">
                     <div class="columns__item_m">
-                        <label for="route-ph" class="form-label form-label_required"><i class="form-label__icon fas fa-phone"></i>Сотовая связь</label>
+                        <label for="place-phone" class="form-label form-label_required"><i class="form-label__icon fas fa-phone"></i>Телефон</label>
                         <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-ph">
-                                <option></option>
-                                <option>Есть</option>
-                                <option>Нет</option>
-                            </select>
+                            <div class="form-input">
+                                <input type="text" class="form-input__input" id="place-phone"/>
+                                <i class="form-input__icon-add fas fa-plus"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="columns__item_m">
-                        <label for="route-water" class="form-label form-label_required"><i class="form-label__icon fas fa-tint"></i>Водообеспеченность</label>
+                        <label for="place-phone2" class="form-label form-label_required"><i class="form-label__icon fas fa-phone"></i>Телефон</label>
                         <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-water">
-                                <option></option>
-                                <option>test</option>
-                                <option>test</option>
-                                <option>test</option>
-                            </select>
+                            <div class="form-input">
+                                <input type="text" class="form-input__input" id="place-phone2"/>
+                                <i class="form-input__icon-remove fas fa-minus"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="columns__item_m">
-                        <label for="route-vid" class="form-label form-label_required">Вид маршрута<i class="form-label__icon fas fa-question-circle form-label__tooltip"></i></label>
+                        <label for="place-phone3" class="form-label form-label_required"><i class="form-label__icon fas fa-phone"></i>Телефон</label>
                         <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-vid">
-                                <option></option>
-                                <option>test</option>
-                                <option>test</option>
-                                <option>test</option>
-                            </select>
+                            <div class="form-input">
+                                <input type="text" class="form-input__input" id="place-phone3"/>
+                                <i class="form-input__icon-remove fas fa-minus"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="columns__item_m">
-                        <label for="route-type" class="form-label form-label_required">Тип маршрута<i class="fas fa-question-circle form-label__tooltip"></i></label>
+                        <label for="place-phone4" class="form-label form-label_required"><i class="form-label__icon fas fa-phone"></i>Телефон</label>
                         <div class="form-input">
-                            <select type="text" class="form-input__input" id="route-type">
-                                <option></option>
-                                <option>test</option>
-                                <option>test</option>
-                                <option>test</option>
-                            </select>
+                            <div class="form-input">
+                                <input type="text" class="form-input__input" id="place-phone4"/>
+                                <i class="form-input__icon-remove fas fa-minus"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -307,33 +272,66 @@
                     </div>
                 </div>
                 <div class="form-container">
-                    <label for="text1" class="form-label form-label_required">Описание<span class="form-label__note">(0/100)</span></label>
+                    <label for="text1" class="form-label form-label_required">О месте<span class="form-label__note">(0/100)</span></label>
                     <textarea class="form-input__input _size_l" id="text1"></textarea>
                 </div>
+
+                <div class="form-container columns">
+                    <div class="columns__item_xl">
+                        <label for="place-hours" class="form-label form-label_required"><i class="form-label__icon fas fa-hourglass-end"></i>Расчетные часы</label>
+                        <div class="form-input form-input_twiced">
+                            <select type="text" class="form-input__input" id="place-hours">
+                                <option>заезд</option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                            <select type="text" class="form-input__input" id="place-hours2">
+                                <option>выезд</option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns__item_xxl">
+                        <label for="place-pets" class="form-label form-label_required"><i class="form-label__icon fas fa-paw"></i>Размещение с животными</label>
+                        <div class="form-input">
+                            <select type="text" class="form-input__input" id="place-pets">
+                                <option></option>
+                                <option>test</option>
+                                <option>test</option>
+                                <option>test</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-container">
-                    <label for="text2" class="form-label">Нитка маршрута<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <label for="text2" class="form-label"><i class="form-label__icon fas fa-folder"></i>Условия бронирования<span class="form-label__note">(0/100)</span></label>
                     <textarea class="form-input__input" id="text2"></textarea>
                 </div>
+
+                <div class="form-subtitle">как добраться</div>
+
                 <div class="form-container">
-                    <label for="text3" class="form-label">Места стоянок<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
-                    <textarea class="form-input__input" id="text3"></textarea>
+                    <label for="place-desk" class="form-label form-label_required">Описание<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
+                    <textarea class="form-input__input _size_l" id="place-desk"></textarea>
+                </div>
+
+                <div class="form-container form-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d443435.0922986362!2d37.84276647165989!3d55.735144727565626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1522106931423" width="600" height="335" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                <div class="form-container">
+                    <label for="address" class="form-label form-label_required">Введите адрес<span class="form-label__note">(0/100)</span></label>
+                    <input type="text" class="form-input__input" id="address" />
                 </div>
                 <div class="form-container">
-                    <label for="text4" class="form-label">Схема движения маршрута<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
-                    <textarea class="form-input__input" id="text4"></textarea>
+                    <label for="coords" class="form-label form-label_required">Координаты места<span class="form-label__note">(0/100)</span></label>
+                    <input type="text" class="form-input__input" id="coords" />
                 </div>
-                <div class="form-container">
-                    <label for="text5" class="form-label">Радиальные выходы<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
-                    <textarea class="form-input__input" id="text5"></textarea>
-                </div>
-                <div class="form-container">
-                    <label for="text6" class="form-label">Правила и рекомендации<span class="form-label__note">(0/100)<i class="fas fa-question-circle form-label__tooltip"></i></span></label>
-                    <textarea class="form-input__input" id="text6"></textarea>
-                </div>
-                <div class="form-container">
-                    <label for="text7" class="form-label form-label_required">Как добраться до начала маршрута<span class="form-label__note">(0/100)</span></label>
-                    <textarea class="form-input__input _size_l" id="text7"></textarea>
-                </div>
+
                 <div class="form-container">
                     <label class="form-label">Загрузить изображения для маршрута</label>
                     <label for="upload-photo2" class="form__upload-file form__upload-file_area">
