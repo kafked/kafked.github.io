@@ -190,7 +190,9 @@ body ::-webkit-scrollbar-thumb:hover {
   display: table;
   content: " "; }
 
-.clearfix:after, .page-layout:after {
+
+.clearfix:after,
+.page-layout:after {
   clear: both; }
 
 input[type="text"],
@@ -1618,3 +1620,86 @@ a.icon-circle_green:active {
   height: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.21);
   padding-top: 9px; }
+
+.section-search {
+  position: relative; }
+
+.place-container__item {
+  border: 1px solid #d1d1d1;
+  -webkit-transition: .3s border-color, -webkit-box-shadow;
+  transition: .3s border-color, -webkit-box-shadow;
+  transition: .3s border-color, box-shadow;
+  transition: .3s border-color, box-shadow, -webkit-box-shadow;
+  margin-bottom: 38px;
+  background-color: #ffffff; }
+  .place-container__item:hover {
+    -webkit-box-shadow: 0 0 3px #2d9821;
+            box-shadow: 0 0 3px #2d9821;
+    border-color: #2d9821; }
+
+.place-container__item-info {
+  padding: 16px 24px; }
+
+.place-container__item-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 39px; }
+
+.place-container__item-title {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #575757; }
+
+.place-container__item-price {
+  font-size: 22px;
+  letter-spacing: .6px; }
+  .place-container__item-price .icon-many {
+    font-size: 22px;
+    margin-right: 10px; }
+  .place-container__item-price .place-container__item-price-cost {
+    color: #57a750; }
+
+.place-container__item-center {
+  color: #575757;
+  font-size: 16px;
+  letter-spacing: 0.6px; }
+
+.place-container__item-rest {
+  width: 100%;
+  padding: 0 42px; }
+
+.place-container__item-rests {
+  height: 40px;
+  background-color: #2d9821;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: -1px;
+  margin-right: -1px;
+  white-space: nowrap;
+  overflow: hidden; }
+  .place-container__item-rests .place-container__item-rests-title {
+    font-size: 16px;
+    color: #ffffff; }
+  .place-container__item-rests i {
+    font-family: "routs-type";
+    color: #ffffff;
+    font-size: 24px;
+    font-style: normal; }
