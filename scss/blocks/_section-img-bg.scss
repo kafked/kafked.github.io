@@ -14,9 +14,17 @@
 
   }
 }
+.section-img-bg_size_l {
+  height: 470px;
+}
 .section-img-bg_overlay_light {
   &:before {
     background-color: $overlay-light;
+  }
+}
+.section-img-bg_overlay_remove {
+  &:before {
+    content: none;
   }
 }
 .section-img-bg__img {
@@ -49,4 +57,22 @@
     margin-top: -2px;
     font-size: 12px;
   }
+}
+.section-img-bg__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-img-bg__title-text {
+  font-size: 60px;
+  color: $white;
+  padding: 3px 19px;
+  font-weight: 300;
+  background-color: transparentize($black, .55);
 }

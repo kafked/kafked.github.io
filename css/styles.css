@@ -190,9 +190,7 @@ body ::-webkit-scrollbar-thumb:hover {
   display: table;
   content: " "; }
 
-
-.clearfix:after,
-.page-layout:after {
+.clearfix:after, .page-layout:after {
   clear: both; }
 
 input[type="text"],
@@ -355,6 +353,9 @@ a.icon-circle_green:active {
   min-height: 100vh;
   padding: 95px 0 248px; }
 
+.content-container_white {
+  background-color: #ffffff; }
+
 .page-wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -498,8 +499,14 @@ a.icon-circle_green:active {
     right: 0;
     z-index: 1; }
 
+.section-img-bg_size_l {
+  height: 470px; }
+
 .section-img-bg_overlay_light:before {
   background-color: rgba(186, 186, 186, 0.7); }
+
+.section-img-bg_overlay_remove:before {
+  content: none; }
 
 .section-img-bg__img {
   position: absolute;
@@ -535,6 +542,30 @@ a.icon-circle_green:active {
     float: left;
     margin-top: -2px;
     font-size: 12px; }
+
+.section-img-bg__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.section-img-bg__title-text {
+  font-size: 60px;
+  color: #ffffff;
+  padding: 3px 19px;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.45); }
 
 .search-filter {
   margin-top: 117px;
@@ -1457,6 +1488,42 @@ a.icon-circle_green:active {
 
 .form-submit {
   text-align: center; }
+
+.breadcrumbs {
+  padding: 26px 0; }
+
+.breadcrumbs__item {
+  font-size: 15px;
+  font-weight: 300;
+  display: inline-block;
+  vertical-align: middle; }
+  .breadcrumbs__item svg, .breadcrumbs__item i {
+    margin-right: 8px; }
+  .breadcrumbs__item:not(:last-of-type):after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid #cfcfcf;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    border-width: 0 1px 1px 0;
+    margin: 0 5px; }
+
+.breadcrumbs__link {
+  color: #00a8e2; }
+
+.about-block {
+  padding-bottom: 20px; }
+
+.about-block__title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-transform: uppercase; }
+
+.about-block__text {
+  font-size: 15px;
+  font-weight: 300; }
 
 .footer {
   background: #232323;
