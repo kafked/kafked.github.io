@@ -30,18 +30,63 @@
     background-color: darken($input-bg, 3%);
   }
 }
-.button_green {
+.button_flat {
   font-size: 17px;
   text-align: center;
   height: 45px;
   line-height: 45px;
   min-width: 230px;
+  display: inline-block;
+  vertical-align: top;
+}
+.button_green {
   background: $color-green2;
-  color: $white;
+  color: $white !important;
   &:hover {
     background: lighten($color-green2, 2%);
   }
   &:active {
     background: darken($color-green2, 2%);
+  }
+}
+.button_gray2 {
+  background: $color-gray;
+  color: $white !important;
+  &:hover {
+    background: lighten($color-gray, 2%);
+  }
+  &:active {
+    background: darken($color-gray, 2%);
+  }
+}
+.button_next {
+  &:after {
+    font-family: "Font Awesome 5 Solid";
+    content: "\f061";
+  }
+  svg {
+    right: 20px;
+  }
+}
+.button_prev {
+  &:before {
+    font-family: "Font Awesome 5 Solid";
+    content: "\f060";
+  }
+  svg {
+    left: 20px;
+  }
+}
+.button_next, .button_prev {
+  position: relative;
+  &:before,&:after {
+    display: none;
+  }
+  svg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    font-size: 28px;
   }
 }

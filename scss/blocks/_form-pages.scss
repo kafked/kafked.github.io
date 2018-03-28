@@ -232,4 +232,9 @@
 }
 .form-submit {
   text-align: center;
+  .button {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
 }

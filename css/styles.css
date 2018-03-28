@@ -190,9 +190,7 @@ body ::-webkit-scrollbar-thumb:hover {
   display: table;
   content: " "; }
 
-
-.clearfix:after,
-.page-layout:after {
+.clearfix:after, .page-layout:after {
   clear: both; }
 
 input[type="text"],
@@ -308,18 +306,55 @@ input[type="file"] {
   .button_gray:active {
     background-color: #f0f0f0; }
 
-.button_green {
+.button_flat {
   font-size: 17px;
   text-align: center;
   height: 45px;
   line-height: 45px;
   min-width: 230px;
+  display: inline-block;
+  vertical-align: top; }
+
+.button_green {
   background: #2d9821;
-  color: #ffffff; }
+  color: #ffffff !important; }
   .button_green:hover {
     background: #2fa023; }
   .button_green:active {
     background: #2b901f; }
+
+.button_gray2 {
+  background: #939393;
+  color: #ffffff !important; }
+  .button_gray2:hover {
+    background: #989898; }
+  .button_gray2:active {
+    background: #8e8e8e; }
+
+.button_next:after {
+  font-family: "Font Awesome 5 Solid";
+  content: "\f061"; }
+
+.button_next svg {
+  right: 20px; }
+
+.button_prev:before {
+  font-family: "Font Awesome 5 Solid";
+  content: "\f060"; }
+
+.button_prev svg {
+  left: 20px; }
+
+.button_next, .button_prev {
+  position: relative; }
+  .button_next:before, .button_next:after, .button_prev:before, .button_prev:after {
+    display: none; }
+  .button_next svg, .button_prev svg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    font-size: 28px; }
 
 .icon-circle {
   width: 24px;
@@ -1529,6 +1564,8 @@ a.icon-circle_green:active {
 
 .form-submit {
   text-align: center; }
+  .form-submit .button:not(:last-child) {
+    margin-right: 60px; }
 
 .breadcrumbs {
   padding: 26px 0; }
@@ -1824,37 +1861,3 @@ a.icon-circle_green:active {
 .place-container__item-dates-date {
   color: #2d9821;
   letter-spacing: .6px; }
-
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 42px; }
-
-.navigation__link {
-  height: 44px;
-  width: 228px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  letter-spacing: 0.3px;
-  font-size: 19px; }
-
-.navigation__link-back {
-  background: #929292;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  margin-right: 30px; }
-
-.navigation__link-done {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
