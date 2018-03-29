@@ -50,7 +50,7 @@
     <main class="content-container">
         <div class="page-wrapper page-wrapper_padding">
             <h1 class="page-title">
-                добавить инструктора
+                добавить тур
             </h1>
         </div>
         <div class="page-wrapper">
@@ -59,6 +59,10 @@
                     <img class="form-head__img" src="img/icons/icon-form-pen.png" />
                     <img class="form-head__img" src="img/icons/icon-form-running.png" />
                     <img class="form-head__img" src="img/icons/icon-form-handed.png" />
+                </div>
+                <div class="control-title">
+                    <h2 class="control-title-subtitle">Туры</h2>
+                    <a href="#" class="control-title-add"><i class="fas fa-plus-circle"></i> Добавить тур</a>
                 </div>
                 <div class="place-container">
                     <div class="place-container__item">
@@ -83,6 +87,10 @@
                             <div class="place-container__item-bottom">
                                 <div class="place-container__item-dates">Дата проведения: <span class="place-container__item-dates-date">24.09.10-10.10.10 24.02.10-03.10.10 24.09.10-10.10.10 24.09.10-10.10.10 24.09.10-10.10.10</span></div>
                                 <div class="place-container__item-dates">Длительность: <span class="place-container__item-dates-duration">7 дней  до 25 дней пока не известно</span></div>
+                                <div class="controls-items">
+                                    <a href="#" class="controls-items-del"><i class="fas fa-minus-circle"></i>Удалить номер</a>
+                                    <a href="#" class="controls-items-edit"><i class="fas fa-pencil-alt"></i>Редактировать</a>
+                                </div>
                             </div>
                         </div>
                         <div class="place-container__item-rests">
@@ -138,6 +146,257 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="place-container__item">
+                        <div class="place-container__item-info">
+                            <div class="place-container__item-top">
+                                <div class="place-container__item-title">Lorem ipsum – псевдо-латинский текст, который используется</div>
+                                <div class="place-container__item-price">
+                                    <i class="icon-many"></i>Цена:
+                                    <span class="place-container__item-price-cost">3500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="place-container__item-center">
+                                <p>
+                                    Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки вместо английск.
+                                    ого текста для того, чтобы сделать ударение не на содержание, а на элементы дизайна.
+                                    Такой текст также называется как заполнитель.
+                                    Это очень удобный инструмент для моделей (макетов).
+                                    о Такой текст также называется как заполнитель.
+                                    Это очень удобный инструмент для моделей (макетов).
+                                </p>
+                            </div>
+                            <div class="place-container__item-bottom">
+                                <div class="place-container__item-dates">Дата проведения: <span class="place-container__item-dates-date">24.09.10-10.10.10 24.02.10-03.10.10 24.09.10-10.10.10 24.09.10-10.10.10 24.09.10-10.10.10</span></div>
+                                <div class="place-container__item-dates">Длительность: <span class="place-container__item-dates-duration">7 дней  до 25 дней пока не известно</span></div>
+                                <div class="controls-items">
+                                    <a href="#" class="controls-items-del"><i class="fas fa-minus-circle"></i>Удалить номер</a>
+                                    <a href="#" class="controls-items-edit"><i class="fas fa-pencil-alt"></i>Редактировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-container__item-rests">
+                            <span class="place-container__item-rests-title">Виды отдыха:</span>
+                            <div class="place-container__item-rest columns">
+                                <div class="place-container__item-type-rest">
+                                    <input id="r1" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r1"><i class="routes-icon type-1"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r2" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r2"><i class="routes-icon type-2"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r3" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r3"><i class="routes-icon type-3"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r4" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r4"><i class="routes-icon type-4"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r5" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r5"><i class="routes-icon type-5"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r6" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r6"><i class="routes-icon type-6"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r7" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r7"><i class="routes-icon type-7"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r8" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r8"><i class="routes-icon type-8"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r9" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r9"><i class="routes-icon type-9"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r10" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r10"><i class="routes-icon type-10"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r11" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r11"><i class="routes-icon type-11"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r12" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r12"><i class="routes-icon type-12"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-container__item">
+                        <div class="place-container__item-info">
+                            <div class="place-container__item-top">
+                                <div class="place-container__item-title">Lorem ipsum – псевдо-латинский текст, который используется</div>
+                                <div class="place-container__item-price">
+                                    <i class="icon-many"></i>Цена:
+                                    <span class="place-container__item-price-cost">3500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="place-container__item-center">
+                                <p>
+                                    Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки вместо английск.
+                                    ого текста для того, чтобы сделать ударение не на содержание, а на элементы дизайна.
+                                    Такой текст также называется как заполнитель.
+                                    Это очень удобный инструмент для моделей (макетов).
+                                    о Такой текст также называется как заполнитель.
+                                    Это очень удобный инструмент для моделей (макетов).
+                                </p>
+                            </div>
+                            <div class="place-container__item-bottom">
+                                <div class="place-container__item-dates">Дата проведения: <span class="place-container__item-dates-date">24.09.10-10.10.10 24.02.10-03.10.10 24.09.10-10.10.10 24.09.10-10.10.10 24.09.10-10.10.10</span></div>
+                                <div class="place-container__item-dates">Длительность: <span class="place-container__item-dates-duration">7 дней  до 25 дней пока не известно</span></div>
+                                <div class="controls-items">
+                                    <a href="#" class="controls-items-del"><i class="fas fa-minus-circle"></i>Удалить номер</a>
+                                    <a href="#" class="controls-items-edit"><i class="fas fa-pencil-alt"></i>Редактировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-container__item-rests">
+                            <span class="place-container__item-rests-title">Виды отдыха:</span>
+                            <div class="place-container__item-rest columns">
+                                <div class="place-container__item-type-rest">
+                                    <input id="r1" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r1"><i class="routes-icon type-1"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r2" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r2"><i class="routes-icon type-2"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r3" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r3"><i class="routes-icon type-3"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r4" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r4"><i class="routes-icon type-4"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r5" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r5"><i class="routes-icon type-5"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r6" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r6"><i class="routes-icon type-6"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r7" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r7"><i class="routes-icon type-7"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r8" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r8"><i class="routes-icon type-8"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r9" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r9"><i class="routes-icon type-9"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r10" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r10"><i class="routes-icon type-10"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r11" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r11"><i class="routes-icon type-11"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r12" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r12"><i class="routes-icon type-12"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-container__item">
+                        <div class="place-container__item-info">
+                            <div class="place-container__item-top">
+                                <div class="place-container__item-title">Lorem ipsum – псевдо-латинский текст, который используется</div>
+                                <div class="place-container__item-price">
+                                    <i class="icon-many"></i>Цена:
+                                    <span class="place-container__item-price-cost">3500 ₽</span>
+                                </div>
+                            </div>
+                            <div class="place-container__item-center">
+                                <p>
+                                    Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки вместо английск.
+                                    ого текста для того, чтобы сделать ударение не на содержание, а на элементы дизайна.
+                                    Такой текст также называется как заполнитель.
+                                    Это очень удобный инструмент для моделей (макетов).
+                                    о Такой текст также называется как заполнитель.
+                                    Это очень удобный инструмент для моделей (макетов).
+                                </p>
+                            </div>
+                            <div class="place-container__item-bottom">
+                                <div class="place-container__item-dates">Дата проведения: <span class="place-container__item-dates-date">24.09.10-10.10.10 24.02.10-03.10.10 24.09.10-10.10.10 24.09.10-10.10.10 24.09.10-10.10.10</span></div>
+                                <div class="place-container__item-dates">Длительность: <span class="place-container__item-dates-duration">7 дней  до 25 дней пока не известно</span></div>
+                                <div class="controls-items">
+                                    <a href="#" class="controls-items-del"><i class="fas fa-minus-circle"></i>Удалить номер</a>
+                                    <a href="#" class="controls-items-edit"><i class="fas fa-pencil-alt"></i>Редактировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-container__item-rests">
+                            <span class="place-container__item-rests-title">Виды отдыха:</span>
+                            <div class="place-container__item-rest columns">
+                                <div class="place-container__item-type-rest">
+                                    <input id="r1" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r1"><i class="routes-icon type-1"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r2" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r2"><i class="routes-icon type-2"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r3" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r3"><i class="routes-icon type-3"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r4" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r4"><i class="routes-icon type-4"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r5" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r5"><i class="routes-icon type-5"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r6" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r6"><i class="routes-icon type-6"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r7" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r7"><i class="routes-icon type-7"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r8" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r8"><i class="routes-icon type-8"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r9" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r9"><i class="routes-icon type-9"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r10" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r10"><i class="routes-icon type-10"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r11" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r11"><i class="routes-icon type-11"></i></label>
+                                </div>
+                                <div class="place-container__item-type-rest">
+                                    <input id="r12" type="checkbox" class="checkbox checkbox_white">
+                                    <label for="r12"><i class="routes-icon type-12"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-container form-submit">
+                        <a href="#" class="button button_flat button_gray2 button_prev">Вернуться</a>
+                        <a href="#" class="button button_flat button_green">Завершить</a>
+                        <a href="#" class="button button_flat button_green button_next">Продолжить</a>
                     </div>
                 </div>
             </div>
