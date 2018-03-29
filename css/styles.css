@@ -190,9 +190,7 @@ body ::-webkit-scrollbar-thumb:hover {
   display: table;
   content: " "; }
 
-
-.clearfix:after,
-.page-layout:after {
+.clearfix:after, .page-layout:after {
   clear: both; }
 
 input[type="text"],
