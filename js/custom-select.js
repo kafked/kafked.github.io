@@ -38,11 +38,12 @@ $(document).ready(function () {
             var selectBoxContainer = $('<div>',{
                 width       : select.outerWidth(),
                 class   : 'tzSelect',
-                html        : '<div class="selectBox"></div>'
+                html: '<div class="selectBox"></div><div class="selecBoxing"></div>'
             });
 
             var dropDown = $('<ul>',{class:'dropDown'});
             var selectBox = selectBoxContainer.find('.selectBox');
+            var selectBox2 = selectBoxContainer.find('.selecBoxing');
 
             // Looping though the options of the original select element
 
@@ -96,6 +97,8 @@ $(document).ready(function () {
                 }
 
                 selectBox.addClass('expanded');
+                $('.search-filter__select').removeClass('expanded');
+                selectBox.closest('.search-filter__select').addClass('expanded');
                 dropDown.slideDown();
 
             }).bind('hide',function(){
@@ -112,6 +115,7 @@ $(document).ready(function () {
                     dropDown.trigger('hide');
                 }
                 else dropDown.trigger('show');
+                $('.dropDown').not(dropDown).trigger('hide');
             });
 
             selectBox.click(function(){
