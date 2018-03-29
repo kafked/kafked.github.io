@@ -24,10 +24,10 @@
   margin-bottom: 42px;
   position: relative;
   @include mobile {
-    margin-bottom: 0;
-  }
-  &>div{
-    margin-bottom: 22px;
+    margin-bottom: 10px;
+    &>div{
+      margin-bottom: 22px;
+    }
   }
 }
 .form-label {
@@ -66,6 +66,19 @@
 .form__upload-photo {
   display: flex;
   justify-content: space-between;
+  @include mobile{
+    .form__upload-file{
+      width: 55.7%;
+      flex-basis: 55.7%;
+    }
+    .upload-button_btn{
+      padding-left: 0;
+    }
+    .button_gray{
+      min-width: 100%;
+      padding-right: 0;
+    }
+  }
 }
 .form__upload-photo-preview {
   width: 40%;
@@ -91,6 +104,9 @@
     opacity: 0.7;
   }
   + input[type="file"] {
+    display: none;
+  }
+  @include mobile {
     display: none;
   }
 }
@@ -236,5 +252,9 @@
     &:not(:last-child) {
       margin-right: 60px;
     }
+  }
+  @include mobile{
+    margin-top: 32px;
+    margin-bottom: 30px;
   }
 }

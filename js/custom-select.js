@@ -16,50 +16,51 @@ $(document).ready(function () {
     $('select.regularSelect').tzSelect();
 });
 
-(function ($) {
-    $.fn.tzSelect = function (options) {
+(function($){
+
+    $.fn.tzSelect = function(options){
         options = $.extend({
-            render: function (option) {
-                return $('<li>', {
-                    html: option.text()
+            render : function(option){
+                return $('<li>',{
+                    html : option.text()
                 });
             },
-            className: ''
-        }, options);
+            className : ''
+        },options);
 
-        return this.each(function () {
+        return this.each(function(){
 
             // The "this" points to the current select element:
 
+            var obj = this;
             var select = $(this);
 
-            var selectBoxContainer = $('<div>', {
-                width: select.outerWidth(),
-                className: 'tzSelect',
-                html: '<div class="selectBox"></div><div class="selecBoxing"></div>'
+            var selectBoxContainer = $('<div>',{
+                width       : select.outerWidth(),
+                class   : 'tzSelect',
+                html        : '<div class="selectBox"></div>'
             });
 
-            var dropDown = $('<ul>', {className: 'dropDown'});
+            var dropDown = $('<ul>',{class:'dropDown'});
             var selectBox = selectBoxContainer.find('.selectBox');
-            var selectBox2 = selectBoxContainer.find('.selecBoxing');
 
             // Looping though the options of the original select element
 
-            if (options.className) {
+            if(options.className){
                 dropDown.addClass(options.className);
             }
 
-            select.find('option').each(function (i) {
+            select.find('option').each(function(i){
                 var option = $(this);
 
-                if (i == select.attr('selectedIndex')) {
+                if(i==obj.selectedIndex){
                     selectBox.html(option.text());
                 }
 
                 // As of jQuery 1.4.3 we can access HTML5
                 // data attributes with the data() method.
 
-                if (option.data('skip')) {
+                if(option.data('skip')){
                     return true;
                 }
 
@@ -68,40 +69,19 @@ $(document).ready(function () {
 
                 var li = options.render(option);
 
-                li.click(function () {
-                    var smallIcon;
-                    if (option.data('icon')){
-                        smallIcon = '<i class="' + option.data('icon') + '" /></i>';
-                    }
-                    else if (option.data('image')) {
-                        smallIcon = '<i class="' + option.data('image') + '" />';
-                    }
-                    else {
-                        smallIcon = '';
-                    }
-                    selectBox2.html(smallIcon + option.text());
+                li.click(function(){
+
+                    selectBox.html(option.text());
                     dropDown.trigger('hide');
-
-                    $('.tzSelect').addClass('bgc-select');
-
 
                     // When a click occurs, we are also reflecting
                     // the change on the original select element:
                     select.val(option.val());
-                    selectBox.addClass('selecteds');
-                    selectBox2.addClass('selecteds');
-                    $("form:first").trigger("submit");
+
                     return false;
                 });
 
                 dropDown.append(li);
-            });
-
-            $('.clearForm').click(function () {
-                selectBox2.html('');
-                selectBox.removeClass('selecteds');
-                selectBox2.removeClass('selecteds');
-                $('.tzSelect').removeClass('bgc-select');
             });
 
             selectBoxContainer.append(dropDown.hide());
@@ -109,32 +89,32 @@ $(document).ready(function () {
 
             // Binding custom show and hide events on the dropDown:
 
-            dropDown.bind('show', function () {
-                if (dropDown.is(':animated')) {
+            dropDown.bind('show',function(){
+
+                if(dropDown.is(':animated')){
                     return false;
                 }
+
                 selectBox.addClass('expanded');
-                $('.search-filter__select').removeClass('expanded');
-                selectBox.closest('.search-filter__select').addClass('expanded');
                 dropDown.slideDown();
 
-            }).bind('hide', function () {
-                // if (dropDown.is(':animated')) {
-                //     return false;
-                // }
-                $('<ul>', {className: 'dropDown'}).removeClass('expanded');
+            }).bind('hide',function(){
+
+                if(dropDown.is(':animated')){
+                    return false;
+                }
+
                 selectBox.removeClass('expanded');
-                //selectBox.closest('.search-filter__select').removeClass('expanded');
                 dropDown.slideUp();
-            }).bind('toggle', function () {
-                if (selectBox.hasClass('expanded')) {
+
+            }).bind('toggle',function(){
+                if(selectBox.hasClass('expanded')){
                     dropDown.trigger('hide');
                 }
                 else dropDown.trigger('show');
-                $('.dropDown').not(dropDown).trigger('hide');
             });
 
-            selectBox.click(function () {
+            selectBox.click(function(){
                 dropDown.trigger('toggle');
                 return false;
             });
@@ -142,9 +122,11 @@ $(document).ready(function () {
             // If we click anywhere on the page, while the
             // dropdown is shown, it is going to be hidden:
 
-            $(document).click(function () {
+            $(document).click(function(){
                 dropDown.trigger('hide');
             });
+
         });
     }
+
 })(jQuery);
