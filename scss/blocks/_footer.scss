@@ -3,6 +3,9 @@
   bottom: 0;
   color: $white;
   padding: 56px 0 0;
+  @include mobile {
+    padding-top: 21px;
+  }
 }
 .footer__wrapper {
   display: flex;
@@ -50,6 +53,9 @@
   flex: 1;
   padding-left: 30px;
   padding-top: 12px;
+  @include mobile {
+    display: none;
+  }
 }
 .footer__menu-title {
   font-size: 14px;
@@ -75,6 +81,11 @@
   font-size: 12px;
   color: $white;
 }
+.footer__left {
+  @include tablet {
+    display: none;
+  }
+}
 .footer__right {
   padding-top: 12px;
 }
@@ -87,6 +98,9 @@
   margin-bottom: 19px;
   text-align: left;
   display: block;
+  @include mobile {
+    display: none;
+  }
   svg {
     margin-right: 8px;
     vertical-align: middle;
@@ -95,6 +109,10 @@
 .footer__social {
   padding: 0 8px;
   width: 165px;
+  @include mobile {
+    padding: 0;
+    width: 150px;
+  }
 }
 .footer__social-title {
   font-size: 12px;
@@ -154,4 +172,7 @@
   height: 30px;
   border-top: 1px solid transparentize($white, .79);
   padding-top: 9px;
+  @include mobile {
+    margin-top: 23px;
+  }
 }

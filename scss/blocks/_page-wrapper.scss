@@ -6,6 +6,9 @@
   background-color: $color-lightgray;
   min-height: 100vh;
   padding: 95px 0 248px;
+  @include mobile {
+    padding: 47px 0 136px;
+  }
 }
 .content-container_white {
   background-color: $white;
@@ -18,6 +21,10 @@
 .page-wrapper_padding {
   padding-left: 15px;
   padding-right: 15px;
+  @include mobile {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 .page-layout {
   margin: 24px 0 100px;

@@ -114,6 +114,8 @@ $(document).ready(function () {
                     return false;
                 }
                 selectBox.addClass('expanded');
+                $('.search-filter__select').removeClass('expanded');
+                selectBox.closest('.search-filter__select').addClass('expanded');
                 dropDown.slideDown();
 
             }).bind('hide', function () {
@@ -122,6 +124,7 @@ $(document).ready(function () {
                 // }
                 $('<ul>', {className: 'dropDown'}).removeClass('expanded');
                 selectBox.removeClass('expanded');
+                //selectBox.closest('.search-filter__select').removeClass('expanded');
                 dropDown.slideUp();
             }).bind('toggle', function () {
                 if (selectBox.hasClass('expanded')) {

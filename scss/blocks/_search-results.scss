@@ -3,6 +3,9 @@
 }
 .search-results__top {
   padding: 40px 0 24px;
+  @include mobile {
+    display: none;
+  }
 }
 .search-results__title {
   font-size: 22px;
@@ -11,21 +14,31 @@
   letter-spacing: 0.6px;
 }
 .search-results__list {
-
+  @include mobile {
+    margin: 0 -12px;
+  }
 }
 .search-results__item {
   border: 1px solid $border-color;
   transition: .3s border-color, box-shadow;
   margin-bottom: 38px;
   background-color: $white;
+  @include mobile {
+    margin-bottom: 10px;
+  }
   &:hover {
-    box-shadow: 0 0 3px $color-green2;
-    border-color: $color-green2;
+    @include desktop {
+      box-shadow: 0 0 3px $color-green2;
+      border-color: $color-green2;
+    }
   }
 }
 .search-results__item-info {
   display: flex;
   padding: 23px 27px 17px;
+  @include mobile {
+    padding: 32px 12px 131px 7px;
+  }
 }
 .search-results__item-info_basic-card {
   padding: 31px 0 31px 20px;
@@ -41,6 +54,26 @@
   margin-right: -1px;
   white-space: nowrap;
   overflow: hidden;
+  .owl-carousel {
+    .owl-nav {
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: -4px;
+        bottom: 0;
+        font-size: 32px;
+        color: #fff;
+        height: 100%;
+        line-height: 0;
+        width: 20px;
+      }
+      .owl-prev {
+        left: 0;
+      }
+      .owl-next {
+        right: 0;
+      }
+    }
+  }
   i {
     font-family: "routs-type";
     color: $white;
@@ -60,10 +93,18 @@
 .search-results__item-rests_self-offset{
   margin-bottom: 37px;
   padding-left: 213px;
+  @include mobile {
+    margin-bottom: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 .search-results__item-rests-list {
   display: none;
   overflow:hidden;
+  @include mobile {
+    padding: 0 22px;
+  }
   &._active, &:only-of-type {
     display: inline-block;
   }
@@ -72,9 +113,16 @@
   color: $white;
   font-size: 16px;
   margin-right: 26px;
+  @include mobile {
+    font-size: 14px;
+    margin-right: 6px;
+  }
 }
 .search-results__item-left {
   margin-right: 36px;
+  @include mobile {
+    margin-right: 7px;
+  }
   .search-results__item-info_basic-card & {
     margin-right: 0;
     flex-basis: 33.333%;
@@ -86,10 +134,18 @@
   flex-direction: column;
   justify-content: space-between;
   width: 0;
+  @include mobile {
+    position: relative;
+  }
 }
 .search-results__item-right {
   margin-left: 30px;
   margin-bottom: -20px;
+  @include mobile {
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 18px;
+  }
   .search-results__item-info_basic-card & {
     display: flex;
     flex-direction: column;
@@ -115,6 +171,10 @@
   width:150px;
   height: 150px;
   border-radius: 50%;
+  @include mobile {
+    width: 92px;
+    height: 92px;
+  }
 }
 .search-results__item-photo-img {
   .search-results__item-info_basic-card & {
@@ -161,18 +221,41 @@ $text-lihe-height: 18;
 }
 .search-results__item-name {
   font-size: 23px;
+  @include mobile {
+    font-size: 20px;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: -12px;
+  }
 }
 .search-results__item-tabs {
-
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    top: 116px;
+    width: 95vw;
+    width: calc(100vw - 16px);
+    position: absolute;
+    left: -100px;
+  }
 }
 .search-results__item-tabs-links {
   display: flex;
   justify-content: space-between;
   margin-bottom: 36px;
+  @include mobile {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
 }
 .search-results__item-tabs-link {
   color: $color-gray;
   font-size: 18px;
+  @include mobile {
+    font-size: 14px;
+    margin-top: 8px;
+  }
   &._active {
     color: $color-green;
   }
@@ -183,6 +266,9 @@ $text-lihe-height: 18;
   max-height: 22px;
   width: 100%;
   display: none;
+  @include mobile {
+    max-height: unset;
+  }
   &._active {
     display: block;
   }
@@ -190,6 +276,15 @@ $text-lihe-height: 18;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    @include mobile {
+      white-space: unset;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      margin-bottom: 10px;
+      line-height: 18px;
+      max-height: 36px;
+    }
   }
 }
 .search-results__item-terms {
@@ -199,6 +294,10 @@ $text-lihe-height: 18;
   height: 100%;
   white-space: nowrap;
   min-width: 220px;
+  @include mobile {
+    font-size: 14px;
+    height: auto;
+  }
   .search-results__item-info_basic-card & {
     height: 160px;
     margin-bottom: -20px;
@@ -217,11 +316,18 @@ $text-lihe-height: 18;
 .search-results__item-terms-item {
   flex-basis: 25%;
   letter-spacing: 0.4px;
+  @include mobile {
+    flex-basis: unset;
+  }
   svg, i {
     margin-right: 6px;
     min-width: 26px;
     display: inline-block;
     text-align: center;
+    @include mobile {
+      min-width: 14px;
+      font-size: 13px;
+    }
   }
 }
 .search-results__item-terms-item_company {
