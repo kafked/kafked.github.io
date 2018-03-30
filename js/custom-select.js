@@ -71,14 +71,26 @@ $(document).ready(function () {
                 var li = options.render(option);
 
                 li.click(function(){
-
-                    selectBox.html(option.text());
+                    var smallIcon;
+                    if (option.data('icon')){
+                            smallIcon = '<i class="' + option.data('icon') + '" /></i>';
+                    }
+                    else if (option.data('image')) {
+                            smallIcon = '<i class="' + option.data('image') + '" />';
+                    }
+                    else {
+                        smallIcon = '';
+                    }
+                    selectBox2.html(smallIcon + option.text());;
                     dropDown.trigger('hide');
-
+                    $('.tzSelect').addClass('bgc-select');
                     // When a click occurs, we are also reflecting
                     // the change on the original select element:
                     select.val(option.val());
-
+                    select.val(option.val());
+                    selectBox.addClass('selecteds');
+                    selectBox2.addClass('selecteds');
+                    $("form:first").trigger("submit");
                     return false;
                 });
 
