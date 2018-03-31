@@ -115,9 +115,7 @@ $(document).ready(function () {
 
             }).bind('hide',function(){
 
-                if(dropDown.is(':animated')){
-                    return false;
-                }
+                $('<ul>', {className: 'dropDown'}).removeClass('expanded');
 
                 selectBox.removeClass('expanded');
                 dropDown.slideUp();
